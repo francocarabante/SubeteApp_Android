@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LoginApiApp</string>
+    <string name="seguridad">Seguridad de la app</string>
+
+</resources>

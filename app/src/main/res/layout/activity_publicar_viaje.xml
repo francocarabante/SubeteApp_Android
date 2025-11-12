@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ===== TOOLBAR FIJA ARRIBA ===== -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:titleTextColor="@color/primary">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo1"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="start"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Súbete"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp" />
+
+        <!-- Botón Menú (☰) -->
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menú" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- ===== CONTENIDO SCROLLABLE ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Origen -->
+            <AutoCompleteTextView
+                android:id="@+id/txtOrigen"
+                android:hint="Origen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:inputType="textCapWords" />
+
+            <!-- Destino -->
+            <AutoCompleteTextView
+                android:id="@+id/txtDestino"
+                android:hint="Destino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:inputType="textCapWords" />
+            <!-- Fecha y Hora -->
+
+            <EditText
+                android:id="@+id/txtFechaHora"
+                android:hint="Fecha y hora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp" />
+
+
+            <!-- Cantidad de lugares -->
+            <EditText
+                android:id="@+id/txtLugares"
+                android:hint="Lugares disponibles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:inputType="number" />
+
+            <!-- Precio -->
+            <EditText
+                android:id="@+id/txtPrecio"
+                android:hint="Precio por persona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:inputType="numberDecimal" />
+
+            <!-- Permite encomiendas -->
+            <CheckBox
+                android:id="@+id/chkEncomiendas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permite encomiendas"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Detalles opcionales -->
+            <EditText
+                android:id="@+id/txtDetalles"
+                android:hint="Detalles (opcional)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:inputType="textMultiLine"
+                android:minLines="3" />
+
+            <!-- Tipo de vehículo -->
+            <Spinner
+                android:id="@+id/spnTipoVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botón publicar -->
+            <Button
+                android:id="@+id/btnPublicar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Publicar Viaje"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
